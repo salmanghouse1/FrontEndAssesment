@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+<style>
+body{
+width:100%;
+height:100%;
+position: relative;
+
+}
+
+[class*="btn-"] {
+	 outline: 0;
+	 border-radius: 50px;
+	 font-size: 0.8em;
+	 font-family: 'Roboto', sans-serif;
+	 font-weight: 400;
+	 letter-spacing: 4px;
+	 overflow: hidden;
+	 position: relative;
+	 padding: 2em 3em;
+	 margin: 4em;
+	 text-transform: uppercase;
+	 -webkit-tap-highlight-color: transparent;
+	 transition: all 500ms ease-in-out;
+}
+ [class*="btn-"]::after, [class*="btn-"]::before {
+	 content: "";
+	 position: absolute;
+}
+ [class*="btn-"]:hover, [class*="btn-"]:focus {
+	 background: rgba(255, 255, 255, 0.8);
+}
+ [class*="btn-mix"]::after {
+	 background: #222;
+	 border-radius: 120px;
+	 content: attr(data-text);
+	 color: #fff;
+	 padding: 1.6em 2.5em;
+	 top: 0.4em;
+	 left: 0.5em;
+	 -moz-user-select: none;
+	 user-select: none;
+	 user-drag: none;
+}
+ [class*="btn-mix"]::before {
+	 background: transparent;
+	 border-radius: 100%;
+	 top: 50%;
+	 left: 50%;
+	 box-shadow: 0 1em 2em 3em rgba(255, 50, 0, 0.5), 4em 0em 2em 2em rgba(155, 50, 0, 0.6), -4em -2em 2em 2em rgba(255, 0, 150, 0.5), -4em 2em 2em 4em rgba(0, 0, 150, 0.5), 0 -3em 2em 3em rgba(120, 250, 0, 0.5), 2em -1em 2em 2em rgba(50, 10, 200, 0.5);
+	 width: 0;
+	 height: 0;
+	 animation: mix 5s linear infinite;
+}
+ @keyframes mix {
+	 30% {
+		 box-shadow: 0 -1em 2em 3em rgba(255, 0, 200, 0.5), 4em -1em 2em 3em rgba(255, 50, 0, 0.8), -4em 2em 3em 2em rgba(155, 200, 0, 0.5), -4em -2em 2em 2em rgba(200, 0, 150, 0.6), 0 3em 2em 2em rgba(20, 250, 0, 0.5), 2em 1em 2em 2em rgba(50, 10, 250, 0.5);
+	}
+	 60% {
+		 box-shadow: 2em 1em 2em 3em rgba(55, 0, 200, 0.5), 3em 1em 2em 3em rgba(25, 150, 0, 0.6), 3em -2em 3em 3em rgba(155, 200, 0, 0.5), -4em 2em 2em 3em rgba(200, 0, 50, 0.6), 0 -3em 2em 3em rgba(200, 250, 0, 0.5), -2em 1em 2em 3em rgba(50, 210, 250, 0.6);
+	}
+}
+ .btn-mix-noborder::after {
+	 background: transparent !important;
+	 color: #222 !important;
+}
+ .btn-mix-noRadius {
+	 border-radius: 0 !important;
+}
+ .btn-mix-noRadius::after, .btn-mix-noRadius::before {
+	 border-radius: 0 !important;
+}
+ 
+ 
+ a {
+	 text-decoration: none;
+}
+
+.navArea{
+	height:100px;
+	width:100px;
+	position: relative;
+	
+	z-index:99;
+
+}
+.navArea p{
+
+color:red!important;
+
+}
+#hitArea{
+	position: absolute;;
+
+	background-color:none!important;
+}
+ul li{
+	color:#fff;
+}
+</style>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
+
+<!-- Pixi JS -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/pixi-filters.min.js"></script>
+
+<!-- Slider Plugin -->
+<script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/rgbKineticSlider.js"></script>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	
+	<div id="hitArea" style="z-index:99;background:none;">
+		<div class="navArea">
+			<p>☰</p>
+	
+		</div>
+		<div class="circle" id="circle" style="background:#FF0000;clip-path: circle(50% at 50% 50%);margin-top:-260px;margin-left:-130px;z-index:9999!important;height:0;width:0;position: absolute;">
+			<ul style="height:auto;width:auto;color:#000;top:200px;position:relative;left:200px">
+				<li style="color:black;list-style-type: none;font-size:36px;font-family:Arial;">Home</li>
+
+			</ul>
+	
+	
+		</div>	
+		</div>
+	<main>
+
+		<div class="slider">
+        <div id="rgbKineticSlider" class="rgbKineticSlider"><a href="#" style="display:flex;align-items:center;z-index:9;top:50%;text-align:center" class="btn-mix-noborder" data-text="color">color</a><a href="#" class="btn-mix-noborder" data-text="color">color1</a><a href="#" class="btn-mix-noborder" data-text="color">color3</a></div>
+        <nav>
+          
+            <a href="#" class="main-nav prev" data-nav="previous">Prev <span></span></a>
+            <a href="#" class="main-nav next" data-nav="next">Next <span></span></a>
+        </nav>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+
+  <script>
+    const images = ["slide1.jpg", "slide2.jpg", "slide3.jpg"];
+    const texts = [["UNLOCKED"], ["OFFBEAT"], ["ASTERISKS"]];
+
+    rgbKineticSlider = new rgbKineticSlider({
+        slideImages: images,
+        itemsTitles: texts,
+
+        backgroundDisplacementSprite:
+            "http://hmongouachon.com/_demos/rgbKineticSlider/map-9.jpg",
+        cursorDisplacementSprite:
+            "http://hmongouachon.com/_demos/rgbKineticSlider/displace-circle.png",
+        cursorScaleIntensity: 0.6,
+        cursorMomentum: 0.14,
+
+        swipe: true,
+        swipeDistance: window.innerWidth * 0.4,
+        swipeScaleIntensity: 2,
+
+        slideTransitionDuration: 0.8,
+        transitionScaleIntensity: 30,
+        transitionScaleAmplitude: 160,
+
+        nav: true,
+        navElement: ".main-nav",
+
+        imagesRgbEffect: false,
+        imagesRgbIntensity: 4,
+        navImagesRgbIntensity: 120,
+
+        textsDisplay: true,
+        textTitleSize: 144,
+        textsTiltEffect: true,
+        googleFonts: ["Playfair Display:400"],
+        textsRgbEffect: true,
+        textsRgbIntensity: 1,
+	});
+	
+var nav=document.querySelector('.circle');
+
+document.getElementById('hitArea').addEventListener('click',function(){
+
+gsap.to(nav, {duration: 1, animateIt})
+
+})
+const tl = gsap.timeline();
+tl.from(nav, {
+  height:560,
+  width:560,
+  ease:"power3.inOut"
+});
+tl.reversed(true);
+
+function animateIt() {
+  tl.reversed(!tl.reversed());
+}
+
+
+
+</script>
+</body>
+</html>
