@@ -102,6 +102,41 @@ color:red!important;
 ul li{
 	color:#fff;
 }
+* {
+  box-sizing: border-box;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.center {
+	text-align: center;}
+
+	.center p {
+		margin: 0;
+  position: absolute;
+		top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 </style>
 <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
@@ -141,7 +176,32 @@ ul li{
         </nav>
     </div>
 </main>
+<div class="section" style="background-color:rgba(211, 72, 72);width:100%;height:100%;position: absolute;">
+<div class="row">
+	<div class="col-6" style="margin-top:10%;">
+<div class="secondNav">☰</div>
 
+
+<h2 style="font-family: arial;font-size:50px;text-transform: uppercase;letter-spacing: .25em;">Superior Sound</h2>
+	<h3 style="color:rgba(0,0,0);font-weight: 100;font-family: Arial;font-size:35px;">Experience Live Versions of your favourite songs.</h3>
+
+	<button style="width:200px;color:rgba(211, 72, 72);background:#FFF;border:none;font-size:18px;font-weight: 500;padding-top:15px;padding-bottom:15px;border-radius: 32px;">See Demo</button>
+
+</div>
+<div class="col-6">
+	<button style="width:200px;right:10%;position:absolute;color:rgba(211, 72, 72);background:#FFF;border:none;font-size:18px;font-weight: 500;padding-top:15px;padding-bottom:15px;border-radius: 32px;">Try it Now</button>
+
+<!--second column-->
+<img src="medium17.png" style="position: absolute;height:40%;top:40%;">
+<img src="medium17.png" style="position: absolute;height:40%;bottom:10%;right:10%;-webkit-transform: scaleX(-1);
+transform: scaleX(-1);">
+<div class="center" style="height:100px;width:100px;border-radius:100%;background:rgba(255, 255, 255, 0);border:4px solid white;position: relative;">
+<p style="vertical-align: middle;">CLICK</p>
+</div>
+
+</div>
+</div>
+</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
   <script>
