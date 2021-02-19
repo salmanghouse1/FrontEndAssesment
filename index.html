@@ -6,6 +6,41 @@
 	<title>Document</title>
 	
 <style>
+	.button {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+		  background: transparent linear-gradient(90deg, #1FE1E9 0%, #5E33D1 44%, #D34848 74%, #FFB33F 100%) 0% 0% no-repeat padding-box;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+.button::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, #4405f7, transparent);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  transition: width .2s ease, height .2s ease;
+}
+.button:hover::before {
+  --size: 400px;
+}
 body{
 width:100%;
 height:100%;
@@ -120,7 +155,7 @@ ul li{
 [class*="col-"] {
   float: left;
   padding: 15px;
-  border: 1px solid red;
+  
 }
 .row::after {
   content: "";
@@ -137,6 +172,27 @@ ul li{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.button {
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: #f72359;
+  padding: 1em 2em;
+  border: none;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.button span {
+  position: relative;
+  pointer-events: none;
+}
+
 </style>
 <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/TweenMax.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/hmongouachon/rgbKineticSlider/js/libs/imagesLoaded.pkgd.min.js"></script>
@@ -158,8 +214,21 @@ ul li{
 		</div>
 		<div class="circle" id="circle" style="background:#FF0000;clip-path: circle(50% at 50% 50%);margin-top:-260px;margin-left:-130px;z-index:9999!important;height:0;width:0;position: absolute;">
 			<ul style="height:auto;width:auto;color:#000;top:200px;position:relative;left:200px">
-				<li style="color:black;list-style-type: none;font-size:36px;font-family:Arial;">Home</li>
-
+				<li style="text-align: left;
+				font: normal normal bold 47px/57px Helvetica;
+				letter-spacing: 4.7px;
+				color: rgba(0,0,0,1);
+				opacity: 1;text-decoration: none;list-style-type:none;">WHAT IS IT</li>
+<li style="text-align: left;
+font: normal normal bold 47px/57px Helvetica;
+letter-spacing: 4.7px;
+color: rgba(0,0,0,1);
+opacity: 1;text-decoration: none;list-style-type:none;">PERKS</li>
+<li style="text-align: left;
+font: normal normal bold 47px/57px Helvetica;
+letter-spacing: 4.7px;
+color: rgba(0,0,0,1);
+opacity: 1;text-decoration: none;list-style-type:none;">PRICING</li>
 			</ul>
 	
 	
@@ -176,9 +245,8 @@ ul li{
         </nav>
     </div>
 </main>
-<div class="section" style="background-color:rgba(211, 72, 72);width:100%;height:100%;position: absolute;">
-<div class="row">
-	<div class="col-6" style="margin-top:10%;">
+<div class="row" style="height:100vh; position:relative;background-color:rgba(211, 72, 72);width:100%;">
+	<div class="col-6" style="position: relative;height:100%;">
 <div class="secondNav">☰</div>
 
 
@@ -188,25 +256,177 @@ ul li{
 	<button style="width:200px;color:rgba(211, 72, 72);background:#FFF;border:none;font-size:18px;font-weight: 500;padding-top:15px;padding-bottom:15px;border-radius: 32px;">See Demo</button>
 
 </div>
-<div class="col-6">
-	<button style="width:200px;right:10%;position:absolute;color:rgba(211, 72, 72);background:#FFF;border:none;font-size:18px;font-weight: 500;padding-top:15px;padding-bottom:15px;border-radius: 32px;">Try it Now</button>
+<div class="col-6" style="position: relative;height:100%;">
+	<button style="top:20%;width:200px;right:30%;position:absolute;color:rgba(211, 72, 72);background:#FFF;border:none;font-size:18px;font-weight: 500;padding-top:15px;padding-bottom:15px;border-radius: 32px;">Try it Now</button>
 
 <!--second column-->
 
 <img id="speakers"src="medium17.png" style="position: absolute;height:40%;top:40%;">
 <img src="medium17.png" style="position: absolute;height:40%;bottom:10%;right:10%;-webkit-transform: scaleX(-1);
 transform: scaleX(-1);">
-<div class="center" style="height:100px;width:100px;border-radius:100%;background:rgba(255, 255, 255, 0);border:4px solid white;position: relative;">
+<div class="center" style="position:relative;top:70%;left:15%;height:100px;width:100px;border-radius:100%;background:rgba(255, 255, 255, 0);border:4px solid white;position: relative;">
 <p style="vertical-align: middle;">CLICK</p>
 
 </div>
 
 </div>
 </div>
+
+
+
+<div class="row" style="position:relative;height:20%;width:100%;overflow:hidden;background-color:#FFB33F">
+<div class="col-12" style="position: relative;">
+	<div class="secondNav">☰ Exp Con</div>
 </div>
+</div>
+<div class="row" style="position:relative;height:80%;width:100%;overflow:hidden;background-color:#FFB33F">
+<div class="col-5">
+	<img id="img1" class="img1" style="height:0;width:0;position: absolute;clip-path: circle(8% at 55% 40%);transform: translate(-1400px,-500px);" src="/Image 4.png">
+	<img id="img2" class="img1" style="height:0;width:0;position: absolute;clip-path: circle(5% at 60% 45%);transform: translate(-1400px,-500px);" src="/Image 4.png">
+	
+	<div class="reveal" id="reveal" style="font-weight:1000;font-size:14px;left:323px;top:440px;position:relative;z-index:9;height:100px; width:100px;border-radius: 100%;border:solid #fff 4px;"><p style="font-family: arial;text-transform: uppercase;vertical-align:center;text-align:center;position:relative;vertical-align: middle;">Reveal</p></div>
+	</div>
+
+<div class="col-7" style="position: relative;height:100vh;">
+<h2 style="position:relative;top:157px;text-transform: uppercase;font-size:74px;font-family:Helvetica;character-spacing:100;line-spacing:90;font-weight: Bold;">Front Row Seats</h2>
+<h2 style="position:relative;top:200px;color:black;font-family:helvetica;font-weight:Regular;font-size:51px;color:#191919;character-spacing:100;line-spacing:90">Experience Concerts Up Close and Personal</h2>
+<img id="img3" class="img12" style="height:2221;
+	width:2962;position: absolute;clip-path: circle(5% at 99% 65%);transform: translate(-1400px,-500px);" src="/Image 4.png">
+<button class="button" style="
+height: 81px;top:250px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border-radius: 79px;
+opacity: 1;">
+	<span style="color:#FFB33F;">Hover me I'm awesome</span>
+</button>
+</div>
+
+
+
+</div>
+<div class="row" style="position:relative;height:100vh;width:100%;background-color:#191919">
+<div class="col-12">
+	<div class="secondNav" style="position:relative;top:81px;left:83px;color:#FFFFFF;display: inline;">☰</div>
+	<p style="position:relative;display: inline;top:81px;left:177px;text-align: left;
+	font: normal normal normal 48px/57px Helvetica Neue;
+	letter-spacing: 4.8px;
+	color: #FFFFFF;
+	opacity: 1;">Exp Con</p>
+	
+	<button class="button" style="left:82%;position:absolute;top:69px;">
+	<span>Try It Now</span>
+
+		
+
+
+
+
+</button>
+<div class="row">
+</div>
+
+<div class="col-12">
+<h2 style="left:174px;top:100px;position:relative;width:282px;
+height: 88px;
+text-align: left;
+font: normal normal bold 74px Helvetica Neue;
+letter-spacing: 7.4px;
+color: #FFFFFF;
+opacity: 1;">PERKS</h2>
+</div>
+<div class="row">
+	
+<div class="col-2">
+
+	<h2 style="position:relative;text-align: left;
+	font: normal normal bold 51px Helvetica;left:188px;
+	letter-spacing: 5.1px;
+	color: #D34848;width: 383px;
+	height: 185px;
+	opacity: 1;">Subscription Payment Model</h2>
+	<p style="position:relative;top:28px;left:188px;text-align: left;
+	font: normal normal normal 35px Helvetica;
+	letter-spacing: 3.5px;width: 433px;
+	height: 163px;
+	color: #FFFFFF;
+	opacity: 1;">No commitment, cancel anytime. Never worry about forgetting a payment again!</p>
+	</div>
+	
+<div class="col-2"></div>
+	<div class="col-2">
+	<h2 style="text-align: left;
+	font: normal normal bold 51px Helvetica;
+	letter-spacing: 5.1px;
+	color: #1FE1E9;width: 342px;
+	height: 185px;
+	opacity: 1;position:relative;">No Fee Cancelation Policy</h2>
+	<p style="position:relative;top:28px;text-align: left;
+	font: normal normal normal 35px Helvetica;
+	letter-spacing: 3.5px;width: 433px;
+	height: 163px;
+	color: #FFFFFF;
+	opacity: 1;">No commitment, cancel anytime. Never worry about forgetting a payment again!</p>	
+
+</div>
+<div class="col-2"></div>
+	<div class="col-2">
+		<h2 style="text-align: left;
+		font: normal normal bold 51px Helvetica;
+		letter-spacing: 5.1px;
+		color: #FFB33F;width: 342px;
+		height: 185px;right:188px;
+		opacity: 1;position:relative;">Subscription Payment Model</h2>
+		<p style="position:relative;top:28px;text-align: left;
+		font: normal normal normal 35px Helvetica;
+		letter-spacing: 3.5px;width: 433px;
+		height: 163px;
+		color: #FFFFFF;
+		right:188px;
+		opacity: 1;">No commitment, cancel anytime. Never worry about forgetting a payment again!</p>	
+	</div>
+
+</div>
+<div class="row" style="position:relative;height:100vh;width:100%;background-color:#1FE1E9">
+	<div class="col-12">
+		<div class="secondNav" style="position:relative;top:81px;left:83px;color:#FFFFFF;display: inline;">☰</div>
+		<p style="position:relative;display: inline;top:81px;left:177px;text-align: left;
+		font: normal normal normal 48px/57px Helvetica Neue;
+		letter-spacing: 4.8px;
+		color: #FFFFFF;
+		opacity: 1;">Exp Con</p>
+		
+		<button class="button" style="left:82%;position:absolute;top:69px;">
+		<span>Try It Now</span>
+	
+			
+	
+	
+	
+	
+	</button>
+	<div class="row">
+	</div>
+	
+	<img src="">
+	
+	</div>
+	
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
   <script>
+document.querySelector('.button').onmousemove = function (e) {
+
+var x = e.pageX - e.target.offsetLeft;
+var y = e.pageY - e.target.offsetTop;
+
+e.target.style.setProperty('--x', x + 'px');
+e.target.style.setProperty('--y', y + 'px');
+};
+
+	  
+
+
 	  playstate=true;
 	  const ctx = new AudioContext();
 	  let audio;
@@ -249,8 +469,8 @@ transform: scaleX(-1);">
 	  
   }); 
 
-    const images = ["slide1.jpg", "slide2.jpg", "slide3.jpg"];
-    const texts = [["UNLOCKED"], ["OFFBEAT"], ["ASTERISKS"]];
+    const images = ["Image 1.png","Image 2.png","Image 3.png"];
+    const texts = [["INTERACTIVE CONCERT EXPERIENCE"], ["INTERACTIVE CONCERT EXPERIENCE"], ["INTERACTIVE CONCERT EXPERIENCE"]];
 
     rgbKineticSlider = new rgbKineticSlider({
         slideImages: images,
@@ -287,23 +507,110 @@ transform: scaleX(-1);">
 	});
 	
 var nav=document.querySelector('.circle');
-
-document.getElementById('hitArea').addEventListener('click',function(){
-
-gsap.to(nav, {duration: 1, animateIt})
-
-})
+x=0;
 const tl = gsap.timeline();
-tl.from(nav, {
-  height:560,
-  width:560,
+document.getElementById('hitArea').addEventListener('click',function(x){
+	if ( nav.clientHeight === 0 ) {
+    // max-height of a number "larger-than-necessary" in order to be dynamic
+    TweenLite.to(nav, .5, {css: {height: 682,width:682}})
+  } else {
+    TweenLite.to(nav, .25, {css: {height: 0,width:0}})
+  }
+}
+);
+
+
+
+
+
+
+
+var img1=document.querySelector('.img1');
+
+var img2=document.querySelector('#img2');
+
+var reveal=document.querySelector('#reveal');
+
+document.querySelector("#reveal").addEventListener('mouseover',function(){
+	
+	
+	
+	gsap.to(img2, {
+  height:2221,
+  width:2962,
   ease:"power3.inOut"
 });
-tl.reversed(true);
 
-function animateIt() {
-  tl.reversed(!tl.reversed());
-}
+gsap.to(reveal, {
+  border:'6px solid #000',
+	color:'#000',
+	fontWeight:'1000',
+  ease:"power3.inOut"
+})
+
+	gsap.to(img1, {
+  height:2221,
+  width:2962,
+  ease:"power3.inOut"
+});
+
+
+
+
+});
+
+
+
+
+
+document.querySelector("#reveal").addEventListener('mouseout',function(){
+	
+
+
+	
+gsap.to(reveal, {
+  color:'#FFF',
+  fontWeight:'800',
+  border:'4px solid #FFF',
+  ease:"power3.inOut"
+})
+
+
+
+
+
+	gsap.to(img1, {
+  height:0,
+  width:0,
+  ease:"power3.inOut"
+});
+gsap.to(img2, {
+  height:0,
+  width:0,
+  ease:"power3.inOut"
+});
+
+
+
+});
+
+
+
+
+
+	
+	
+
+
+
+
+
+function animateIt2() {
+	tl.to(img1,{height:2221,
+width:2962,ease:"power3.inOut"
+});
+};
+
 
 
 
