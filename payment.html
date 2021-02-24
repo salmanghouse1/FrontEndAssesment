@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="main.css">
+        
+<style>
+input:focus {
+  background-color: purple!important;;
+}
+
+</style>
+    </head>
+    <body>
+        <div class="icon">☰</div><div class="logo">EXP|CON</div>
+        <h1 class="heading">Payment</h1>
+        <h2 class="heading2">1.Select Your Plan</h2>
+        <form name="myForm" onchange="validateForm()">
+            <label class="radioItem1">
+                <input type="radio" name="fname11">
+                <span class="checkmark"></span>
+               
+              </label>
+              <label class="radioItemLabel1">BASIC</label>
+              <label class="radioItem2">
+                <input type="radio" name="fname11">
+                <span class="checkmark"></span>
+                
+              </label>
+              <label class="radioItemLabel2">ADVANCED</label>
+              
+              
+              <label class="radioItem3">
+                <input type="radio" name="fname11">
+                <span class="checkmark"></span>
+                
+              </label>
+              <label class="radioItemLabel3">Pro</label>
+
+
+              <h2 class="heading3">2. Billing Information</h2>
+              <label style="
+              position: absolute;
+              top: 896px;
+              left: 254px;
+              width: 117px;
+              height: 26px;
+              text-align: left;
+              font: normal normal bold 22px/34px Helvetica;
+              letter-spacing: 2.2px;
+              color: #000000;
+              opacity: 1;">First Name</label>
+              <input name="fname1" style="
+              position: absolute;
+              top: 934px;
+              left: 254px;
+              width: 681px;
+              height: 74px;
+              background: #FFFFFF 0% 0% no-repeat padding-box;
+              border: 2px solid #000000;
+              opacity: 1;" type="text">
+              <label style="
+              position: absolute;
+              top: 1039px;
+left: 254px;
+
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">BILLING ADDRESS</label>
+              <input name="fname2" style="
+              position: absolute;
+              top: 1077px;
+              left: 254px;
+              width: 681px;
+              height: 74px;
+              background: #FFFFFF 0% 0% no-repeat padding-box;
+              border: 2px solid #000000;
+              opacity: 1;" type="text">
+              <label style="
+              position: absolute;
+              top: 1182px;
+left: 254px;
+width: 46px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">CITY</label>
+              <input name="fname3" style="
+              position: absolute;
+              top: 1221px;
+              left: 254px;
+              width: 321px;
+              height: 74px;
+              background: #FFFFFF 0% 0% no-repeat padding-box;
+              border: 2px solid #000000;
+              opacity: 1;" type="text">
+              <label style="
+              position: absolute;
+              top: 1182px;
+left: 612px;
+width: 141px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">POSTAL CODE</label>
+              <input name="fname4" style="
+              position: absolute;
+              top: 1221px;
+             left: 612px;
+             width: 323px;
+             height: 74px;
+             background: #FFFFFF 0% 0% no-repeat padding-box;
+             border: 2px solid #000000;
+             opacity: 1;" type="text">
+             
+             <label style="position:absolute;
+             top: 1326px;
+             left: 254px;
+             width: 96px;
+             height: 26px;
+             text-align: left;
+             font: normal normal bold 22px/34px Helvetica;
+             letter-spacing: 2.2px;
+             color: #000000;
+             opacity: 1;">COUNTRY</label>
+             
+             <select name="fname5" class="select" id="select" style="
+             position: absolute;
+             top: 1364px;
+             left: 254px;
+             width: 681px;
+             height: 74px;
+             background: #FFFFFF 0% 0% no-repeat padding-box;
+             border: 2px solid #000000;
+             opacity: 1;">
+               <option value="Canada">Canada</option>
+               <option value="USA">USA</option>
+               <option value="Mexico">Mexico</option>
+               <option value="India">India</option>
+             </select>
+             <h2 class="heading4" style="position:absolute;top: 794px;
+             left: 1056px;
+             width: 635px;
+             height: 53px;
+             text-align: left;
+             font: normal normal normal 45px/71px Helvetica;
+             letter-spacing: 4.5px;
+             color: #000000;
+             opacity: 1;">3. Credit Card Information</h2>
+             <label style="position:absolute;
+             top: 896px;
+left: 1056px;
+width: 228px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">CARDHOLDER’S NAME</label>
+             <input name="fname6" style="position:absolute;
+             top: 934px;
+left: 1056px;
+width: 680px;
+height: 74px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #000000;
+opacity: 1;" type="text">
+<label style="position:absolute;
+top: 1039px;
+left: 1056px;
+width: 152px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">CARDHOLDER’S NAME</label>
+<input name="fname7" style="position:absolute;
+top: 1077px;
+left: 1056px;
+width: 680px;
+height: 74px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #000000;
+opacity: 1;" type="text">
+           <label style="position:absolute;
+           top: 1182px;
+left: 1056px;
+width: 156px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">COUNTRY</label>
+           
+           <select name="fname8" class="select" id="select1" style="
+           position: absolute;
+           top: 1221px;
+left: 1056px;
+width: 320px;
+height: 74px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #000000;
+opacity: 1;">
+             <option value="Visa">Visa</option>
+             <option value="Debit">Debit</option>
+             <option value="MasterCard">Mastercard</option>
+             <option value="World">World</option>
+           </select>
+           <label style="position:absolute;
+top: 1182px;
+left: 1414px;
+width: 136px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">EXPIRY YEAR</label>
+<input name="fname9" style="position:absolute;
+top: 1221px;
+left: 1414px;
+width: 322px;
+height: 74px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #000000;
+opacity: 1;" type="text">  
+
+<label style="position:absolute;
+top: 1326px;
+left: 1056px;
+width: 39px;
+height: 26px;
+text-align: left;
+font: normal normal bold 22px/34px Helvetica;
+letter-spacing: 2.2px;
+color: #000000;
+opacity: 1;">CVV</label>
+<input name="fname10" style="
+position: absolute;
+top: 1364px;
+left: 1056px;
+width: 680px;
+height: 74px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 2px solid #000000;
+opacity: 1;" type="text"> 
+<p style="position:absolute;top: 1563px;
+top: 1563px;
+left: 254px;
+width: 651px;
+height: 60px;
+text-align: left;
+letter-spacing: 2.2px;
+opacity: 1;">By continuing, I acknowledge that I’ve read and agree to the <b style="color:rgba(47, 31, 233, 1)">Terms of Service</b> & <b style="color:rgba(47, 31, 233, 1)">Privacy Policy.</b></p>
+       
+    <button id="btn" style="position:absolute;top: 1654px;
+    left: 254px;
+    width: 217px;
+    height: 60px;
+    background: transparent linear-gradient(90deg, rgba(31, 225, 233, 1) 0%, rgba(94, 51, 209, 1) 34%, rgba(211, 72, 72, 1) 65%, rgba(255, 179, 63, 1) 100%) 0% 0% no-repeat padding-box;
+    border-radius: 79px;
+    opacity: 1;color: rgba(255, 255, 255, 1);">DOWNLOAD</button>
+    
+    </form>
+    <footer style="
+    position:absolute;
+    top: 1947px;
+    left: 0px;
+    width: 1920px;
+    height: 538px;
+    background: rgba(94, 51, 209, 1) 0% 0% no-repeat padding-box;
+    opacity: 1;">
+    <i class="fas fa-envelope" style="position:relative;top: 189px;
+    left: 139px;
+    font-size:37px;
+    
+    color: rgba(255, 255, 255, 1);
+    opacity: 1;"></i>
+
+<p style="position:relative;top: 181px;
+left: 202px;
+width: 604px;
+height: 40px;
+font-size:35px;
+text-align: left;
+font: normal normal normal 35px/41px Helvetica;
+letter-spacing: 3.5px;
+color: rgba(255, 255, 255, 1);
+opacity: 1;">support@experienceconcerts.co</p>
+
+<div style="
+position: relative;
+top: 320px;
+left: 846px;
+width: 235px;
+height: 56px;
+text-align: left;
+font: normal normal normal 48px/57px Helvetica;
+letter-spacing: 4.8px;
+color: rgba(255, 255, 255, 1);
+opacity: 1;">Exp Con</div>
+<p style="
+position:relative;
+top:421px;
+left:583px;
+width: 811px;
+height: 28px;
+text-align: left;
+font: normal normal normal 24px/29px Helvetica;
+letter-spacing: 2.4px;
+color: rgba(255, 255, 255, 1);
+opacity: 1;">2019 © All Rights Reserved | Speer Technologies Incorporated</p>
+
+</footer>
+<script async defer>
+            
+            
+    $('#btn').hide();
+
+    function validateForm() {
+var a = document.forms["myForm"]["fname1"].value;
+
+var b = document.forms["myForm"]["fname2"].value;
+
+var c = document.forms["myForm"]["fname3"].value;
+
+var d = document.forms["myForm"]["fname4"].value;
+
+var e = document.forms["myForm"]["fname5"].value;
+
+var f = document.forms["myForm"]["fname6"].value;
+
+var g = document.forms["myForm"]["fname7"].value;
+
+var h = document.forms["myForm"]["fname8"].value;
+
+var i = document.forms["myForm"]["fname9"].value;
+
+var j = document.forms["myForm"]["fname10"].value;
+
+
+var k = document.forms["myForm"]["fname11"].length;
+
+if (a =="") {
+
+$('#btn').hide(1000);
+}
+else if(b=="") {
+    
+$('#btn').hide(1000);
+}
+else if(c==""){
+
+$('#btn').hide(1000);
+}
+else if(d==""){
+
+    $('#btn').hide(1000);
+
+}
+else if(e==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(f==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(g==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(h==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(i==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(j==""){
+
+
+    $('#btn').hide(1000);
+}
+else if(document.getElementsByName('fname11').checked==false){
+    $('#btn').hide(1000);
+    
+}
+
+
+else{
+    $('#btn').show(1000);
+}
+
+    }
+
+
+</script>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        
+    </body>
+</html>

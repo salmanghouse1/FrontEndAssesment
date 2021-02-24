@@ -1,0 +1,257 @@
+body{
+    margin:0;
+    background-color:#FFFFFF;
+    width: 1920px;
+height: 1947px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 1px solid #707070;
+opacity: 1;
+position: absolute;
+}
+
+.icon{
+    position: absolute;
+    top: 107px;
+left: 102px;
+width: 56px;
+height: 34px;
+background: #000000 0% 0% no-repeat padding-box;
+opacity: 1;
+position: absolute;
+}
+.heading{
+
+    top: 308px;
+left: 183px;
+width: 398px;
+height: 88px;
+text-align: left;
+font: normal normal bold 74px/90px Helvetica;
+letter-spacing: 7.4px;
+color: #000000;
+opacity: 1;
+position:absolute;
+}
+.logo{
+    position: absolute;
+    top: 96px;
+left: 197px;
+width: 235px;
+height: 56px;
+text-align: left;
+font: normal normal normal 48px/57px Helvetica;
+letter-spacing: 4.8px;
+color: #000000;
+opacity: 1;
+}
+
+.heading2{
+    position:absolute;
+    top: 517px;
+left: 185px;
+width: 456px;
+height: 53px;
+text-align: left;
+font: normal normal normal 45px/71px Helvetica;
+letter-spacing: 4.5px;
+color: #000000;
+opacity: 1;
+}
+
+.radioItem1
+{position:absolute;
+    top: 610px;
+left: 185px;
+width: 29px;
+height: 28px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 3px solid #000000;
+opacity: 1;
+}
+.radioItemLabel1{
+    position:absolute;
+    top: 602px;
+left: 227px;
+width: 129px;
+height: 44px;
+text-align: left;
+font: normal normal bold 37px/45px Helvetica;
+letter-spacing: 3.7px;
+color: #D24848;
+opacity: 1;
+}
+.radioItem2
+{   position: absolute;
+    top: 610px;
+    left: 439px;
+    width: 28px;
+    height: 28px;
+    
+    opacity: 1;
+}
+
+
+.radioItem1 {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .radioItem1 input {
+    display: none;
+  }
+  
+  .radioItem1 .checkmark {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 50%;
+    background: #ddd;
+    opacity: 0;
+    border:none;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  .radioItem1 input:checked + span.checkmark {
+    opacity: 1;
+    border:none!important;
+    background-color: #D24848;
+  }
+
+
+
+
+  .radioItem2 {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #444;
+    border-radius: 50%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .radioItem2 input {
+    display: none;
+  }
+  
+  .radioItem2 .checkmark {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 50%;
+    background: #ddd;
+    opacity: 0;
+    border:none;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  .radioItem2 input:checked + span.checkmark {
+    opacity: 1;
+    border:none!important;
+    background-color: #FFB33F;
+  }
+
+
+
+
+
+
+.radioItemLabel2{
+    position:absolute;
+    top: 602px;
+left: 482px;
+width: 232px;
+height: 44px;
+text-align: left;
+font: normal normal bold 37px/45px Helvetica;
+letter-spacing: 3.7px;
+color: #FFB33F;
+opacity: 1
+
+}
+
+.radioItem3{
+    position:absolute;
+    top: 610px;
+left: 798px;
+width: 28px;
+height: 28px;
+background: #FFFFFF 0% 0% no-repeat padding-box;
+border: 3px solid #000000;
+opacity: 1
+}
+
+.radioItem3 {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #1FE1E9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .radioItem3 input {
+    display: none;
+  }
+  
+  .radioItem3 .checkmark {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 50%;
+    background: #ddd;
+    opacity: 0;
+    border:none;
+    display: inline-block;
+    transition: opacity 0.3s ease;
+  }
+  
+  .radioItem3 input:checked + span.checkmark {
+    opacity: 1;
+    border:none!important;
+    background-color: #1FE1E9;
+  }
+
+
+
+
+
+
+.radioItemLabel3{
+    position:absolute;
+    top: 602px;
+left: 842px;
+width: 88px;
+height: 44px;
+text-align: left;
+font: normal normal bold 37px/45px Helvetica;
+letter-spacing: 3.7px;
+color: #1FE1E9;
+opacity: 1
+
+}
+
+.heading3{
+    position: absolute;
+    top: 794px;
+left: 189px;
+width: 507px;
+height: 53px;
+text-align: left;
+font: normal normal normal 45px/71px Helvetica Neue;
+letter-spacing: 4.5px;
+color: #000000;
+opacity: 1;
+}
